@@ -12,6 +12,9 @@
  * Please consider supporting continued development of AVsitter and
  * receive automatic updates and other benefits! All details and user
  * instructions can be found at http://avsitter.github.io
+ *
+ * This version includes custom modifications by Synsational Difference,
+ * Happ MacDonald, and Code Violet.
  */
 
 string product = "AVmenu™";
@@ -131,14 +134,14 @@ menu_check(string name, key id, string msg, integer menu_function)
             integer index = llListFindList(MENU_LIST, ["M:" + msg + "*"]);
             if (menu_function == 90004 || (name != last_menu_avatar && index == -1))
             {
-            	menu_page = 0;
+                menu_page = 0;
                 current_menu = -1;
             }
             else if (index != -1)
             {
                 menu_page = 0;
                 current_menu = index;
-            }         
+            }
             avmenu(FALSE, id);
         }
         else
